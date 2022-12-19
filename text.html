@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>텍스트 속성</title>
+
+    <style>
+
+        *{margin: 0; padding: 0;}
+
+
+        #num{
+            width: 150px;
+            height: 150px;
+            margin: 50px auto;
+            background-color: lightblue;
+            text-align: center;
+            font: 100px/150px '';
+        }
+
+    </style>
+
+    <script src="../js/jquery-3.6.1.min.js"></script>
+
+    <script>
+
+        $(document).ready(function(){
+
+            /* text()
+                선택자에 텍스트를 입력하는 명령
+                $('선택자').text('텍스트');
+                (바디에 적힌 내용 자체를 변경가능)
+            */
+
+            var num = 0;
+
+            function counter(){
+
+                count_num = setInterval(function(){
+
+                    num++;
+
+                    if( num > 99 ){
+                        clearInterval( count_num )
+                        // 99까지 가다가 넘으면 클리어 해줘
+                    }else{
+                        $('#num').text( num );
+                    }
+                    //달러 붙이고 중괄호로 시작한다.
+
+                },10);
+
+            }
+
+            counter();
+
+
+
+
+
+
+
+
+
+
+
+        }); //end
+
+
+
+
+
+
+    </script>
+
+
+
+
+</head>
+<body>
+    
+    <div id="num">0</div>
+
+
+</body>
+</html>
